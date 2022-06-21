@@ -12,11 +12,7 @@
           <div class="form-group">
             <label for="source_language">From</label>
 
-            <%
-=begin%>
- <%= select_tag :source_language, options_for_select(@languages, @source_language), class: 'form-control', include_blank: 'Auto-detect' %> 
-<%
-=end%>
+            <%= select_tag :source_language, options_for_select(@languages, @source_language), class: 'form-control', include_blank: 'Auto-detect' %>
           </div>
         </div>
 
@@ -35,11 +31,7 @@
           <div class="form-group">
             <label for="destination_language">To</label>
 
-            <%
-=begin%>
- <%= select_tag :destination_language, options_for_select(@languages, @destination_language), class: 'form-control' %> 
-<%
-=end%>
+            <%= select_tag :destination_language, options_for_select(@languages, @destination_language), class: 'form-control' %>
           </div>
         </div>
     </div>
