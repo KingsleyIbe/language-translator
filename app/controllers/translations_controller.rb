@@ -15,7 +15,31 @@ class TranslationsController < ApplicationController
   def index
   end
 
+  def translate_params
+    params.permit(:source, :source_language, :destination_language)
+  end
+
   def translate
+    @source = translate_params[:source]
+    @source_language = translate_params[:source_language]
+    @destination_language = translate_params[:destination_language]
+  
+    body = {
+      q: @source,
+      target: @destination_language.upcase
+    }
+  
+    body[:source] = @source_language.downcase unless @source_language.empty?
+  
+    translation = api_request(
+      'language/translate/v2',
+      method: :post,
+      body: URI.encode_www_form(body)
+    )
+  
+    @translation = translation['data']['translations'].first['translatedText']
+  
+    render action: :index
   end
 
   private
