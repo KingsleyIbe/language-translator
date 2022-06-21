@@ -9,7 +9,9 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
- gem 'tzinfo-data'
+gem 'tzinfo-data'
+
+gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
