@@ -1,11 +1,3 @@
-# class TranslationsController < ApplicationController
-#   def index
-#   end
-
-#   def translate
-#   end
-# end
-
 require 'rubygems'
 require 'excon'
 
@@ -68,12 +60,13 @@ class TranslationsController < ApplicationController
 
   def fetch_languages
     languages = api_request('language/translate/v2/languages')
+    print('languages')
 
-    # keys = languages['data']['languages'].map { |l| l['language'].upcase }
+    keys = languages['data']['languages'].map { |l| l['language'].upcase }
 
     I18nData
       .languages
-      # .slice(*keys)
+      .slice(*keys)
       .each_with_object([]) do |(iso, name), memo|
         memo << [name, iso]
       end

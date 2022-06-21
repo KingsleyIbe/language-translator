@@ -17,6 +17,8 @@ gem 'excon'
 
 gem 'i18n_data'
 
+gem 'rest-client'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
