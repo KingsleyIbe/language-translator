@@ -4,8 +4,7 @@ require 'excon'
 class TranslationsController < ApplicationController
   before_action :set_defaults
 
-  def index
-  end
+  def index; end
 
   def translate_params
     params.permit(:source, :source_language, :destination_language)
@@ -15,22 +14,22 @@ class TranslationsController < ApplicationController
     @source = translate_params[:source]
     @source_language = translate_params[:source_language]
     @destination_language = translate_params[:destination_language]
-  
+
     body = {
       q: @source,
       target: @destination_language.upcase
     }
-  
+
     body[:source] = @source_language.downcase unless @source_language.empty?
-  
+
     translation = api_request(
       'language/translate/v2',
       method: :post,
       body: URI.encode_www_form(body)
     )
-  
+
     @translation = translation['data']['translations'].first['translatedText']
-  
+
     render action: :index
   end
 
@@ -51,9 +50,8 @@ class TranslationsController < ApplicationController
     params[:body] = body if body
 
     response = Excon.send(method,
-      "https://google-translate1.p.rapidapi.com/#{path}",
-      params
-    )
+                          "https://google-translate1.p.rapidapi.com/#{path}",
+                          params)
 
     JSON.parse(response.body)
   end
