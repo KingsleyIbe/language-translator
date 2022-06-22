@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # get 'translations/index'
-  # get 'translations/translate'
+  get 'translations/index'
+  get 'translations/translate'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
