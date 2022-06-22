@@ -1,6 +1,6 @@
 # LANGUAGE TRANSLATOR APP
 
-The Language Translator App is a rails application that allows to users to translate any language into other languages of their choice. The application provides the user with over one hundred languages and utilizes various endpoints.
+The Language Translator App is a rails application that allows users to translate any language into other languages of their choice. The application provides the user with over one hundred languages and utilizes various endpoints.
 
 #### Budget App Screenshots
 
