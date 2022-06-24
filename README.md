@@ -7,9 +7,11 @@ The Language Translator App is a rails application that allows users to translat
 <table>
   <tr>
     <td>Translator App</td>
+    <td>Translated</td>
   </tr>
   <tr>
     <td><img src="./app/assets/images/translate.jpeg" width=256 height=493></td>
+    <td><img src="./app/assets/images/translate1.jpeg" width=256 height=493></td>
   </tr>
  </table>
 
