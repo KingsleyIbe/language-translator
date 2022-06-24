@@ -15,6 +15,10 @@ The Language Translator App is a rails application that allows users to translat
   </tr>
  </table>
 
+ # Live Demo
+
+ [Live Demo Link](https://language-tanslator.herokuapp.com/)
+
 # Getting Started
 
 
