@@ -61,7 +61,7 @@ class TranslationsController < ApplicationController
     print('languages')
 
     keys = languages['data']['languages'].map { |l| l['language'].upcase }
-    
+
     I18nData
       .languages
       .slice(*keys)
